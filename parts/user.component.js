@@ -32,11 +32,10 @@ var UserComponent = (function () {
     }
     UserComponent.prototype.getData = function () {
         var _this = this;
-        //var body = 'username='+MyDance.id;
-        //this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
-        var url = 'https://itpointlab.cafe24.com/mydance/playlist?username=' + mydance_1.MyDance.id;
-        console.log(url);
-        this.data = this.http.get(url)
+        var body = 'username=' + mydance_1.MyDance.id;
+        //var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
+        //this.data = this.http.get(url)
+        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { return _this.data = data; }, function (err) { return console.log(err); }, function () { return _this.update(); });
     };
