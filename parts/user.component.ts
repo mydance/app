@@ -92,7 +92,10 @@ export class UserComponent {
     }
     
     getData(){
-        var body = 'username='+MyDance.id;
+        let body = new URLSearchParams();
+        data.append('username', MyDance.id);
+  
+        //var body = 'username='+MyDance.id;
         //var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
         
         //this.data = this.http.get(url)

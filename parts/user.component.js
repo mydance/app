@@ -32,7 +32,9 @@ var UserComponent = (function () {
     }
     UserComponent.prototype.getData = function () {
         var _this = this;
-        var body = 'username=' + mydance_1.MyDance.id;
+        var body = new http_1.URLSearchParams();
+        data.append('username', mydance_1.MyDance.id);
+        //var body = 'username='+MyDance.id;
         //var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
         //this.data = this.http.get(url)
         this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
