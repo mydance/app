@@ -31,14 +31,18 @@ var UserComponent = (function () {
             .subscribe(function () { return _this.getData(); });
     }
     UserComponent.prototype.getData = function () {
+        //let body = new URLSearchParams();
+        //body.append('username', MyDance.id);
         var _this = this;
-        var body = new http_1.URLSearchParams();
-        body.append('username', mydance_1.MyDance.id);
         //var body = 'username='+MyDance.id;
         //var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
+        var body = 'username=' + mydance_1.MyDance.id;
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded');
         //this.data = this.http.get(url)
-        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
-            .map(function (res) { return res.json(); })
+        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body, {
+            headers: headers
+        }).map(function (res) { return res.json(); })
             .subscribe(function (data) { return _this.data = data; }, function (err) { return console.log(err); }, function () { return _this.update(); });
     };
     UserComponent.prototype.update = function () {
