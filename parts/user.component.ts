@@ -92,20 +92,15 @@ export class UserComponent {
     }
     
     getData(){
-        //let body = new URLSearchParams();
-        //body.append('username', MyDance.id);
+        let body = new URLSearchParams();
+        body.append('username', MyDance.id);
   
         //var body = 'username='+MyDance.id;
-        //var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
-        
-        var body = 'username='+MyDance.id;
-        var headers = new Headers();
-        headers.append('Content-Type', 'application/x-www-form-urlencoded');
+        var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
         
         //this.data = this.http.get(url)
-        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body, {
-            headers: headers
-          }).map(res => res.json())
+        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
+            .map(res => res.json())
             .subscribe(data => this.data = data,
                         err => console.log(err),
                         () => this.update());
