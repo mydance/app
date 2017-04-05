@@ -92,8 +92,9 @@ export class UserComponent {
     }
     
     getData(){
-        var body = 'username='+MyDance.id;
-        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
+        //var body = 'username='+MyDance.id;
+        //this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
+        this.data = this.http.get('https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id)
             .map(res => res.json())
             .subscribe(data => this.data = data,
                         err => console.log(err),
