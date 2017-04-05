@@ -73,11 +73,11 @@ export class UserComponent {
     @Input()  public propertyName: string;
     @Input()  public entity: any;
     
+    http:Http;
     interval = 2000;
-    club;
-    nickname;
-    data;
-    http;
+    club:string;
+    nickname:string;
+    data:Object;
     list:Object[] = [];
     now:Song;
     
@@ -94,7 +94,10 @@ export class UserComponent {
     getData(){
         //var body = 'username='+MyDance.id;
         //this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
-        this.data = this.http.get('https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id)
+        var url = 'https://itpointlab.cafe24.com/mydance/playlist?username='+MyDance.id;
+        console.log(url)
+        
+        this.data = this.http.get(url)
             .map(res => res.json())
             .subscribe(data => this.data = data,
                         err => console.log(err),
