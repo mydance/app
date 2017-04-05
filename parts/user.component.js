@@ -38,6 +38,7 @@ var UserComponent = (function () {
             .subscribe(function (data) { return _this.data = data; }, function (err) { return console.log(err); }, function () { return _this.update(); });
     };
     UserComponent.prototype.update = function () {
+        console.log(this.data);
         this.club = this.data.info.title;
         //this.nickname = this.data.info.nickname;
         this.nickname = this.data.info.nickname;

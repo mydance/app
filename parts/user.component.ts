@@ -101,6 +101,8 @@ export class UserComponent {
     }
     
     update(){
+        console.log(this.data);
+        
         this.club = this.data.info.title;
         //this.nickname = this.data.info.nickname;
         this.nickname = this.data.info.nickname;
