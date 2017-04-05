@@ -92,7 +92,8 @@ export class UserComponent {
     }
     
     getData(){
-        this.data = this.http.get('https://itpointlab.cafe24.com/mydance/playlist')
+        var body = 'username='+MyDance.id;
+        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
             .map(res => res.json())
             .subscribe(data => this.data = data,
                         err => console.log(err),
@@ -100,9 +101,9 @@ export class UserComponent {
     }
     
     update(){
-        this.club = this.data.info.club;
+        this.club = this.data.info.title;
         //this.nickname = this.data.info.nickname;
-        this.nickname = MyDance.id;
+        this.nickname = this.data.info.nickname;
         
         for (let i = 0; i < this.data.list.length; i++) {
             this.data.list[i].length = this.prettyTime(this.data.list[i].length);

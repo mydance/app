@@ -32,14 +32,15 @@ var UserComponent = (function () {
     }
     UserComponent.prototype.getData = function () {
         var _this = this;
-        this.data = this.http.get('https://itpointlab.cafe24.com/mydance/playlist')
+        var body = 'username=' + mydance_1.MyDance.id;
+        this.data = this.http.post('https://itpointlab.cafe24.com/mydance/playlist', body)
             .map(function (res) { return res.json(); })
             .subscribe(function (data) { return _this.data = data; }, function (err) { return console.log(err); }, function () { return _this.update(); });
     };
     UserComponent.prototype.update = function () {
-        this.club = this.data.info.club;
+        this.club = this.data.info.title;
         //this.nickname = this.data.info.nickname;
-        this.nickname = mydance_1.MyDance.id;
+        this.nickname = this.data.info.nickname;
         for (var i = 0; i < this.data.list.length; i++) {
             this.data.list[i].length = this.prettyTime(this.data.list[i].length);
         }
