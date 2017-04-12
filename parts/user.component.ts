@@ -24,7 +24,7 @@ class Song  {
 <h2 class="ui header">{{club}}</h2>
 <div class="ui horizontal list">
     <div class="item" >
-        <img src="/templates/images/avatar2/small/elyse.png" class="ui mini circular image">
+        <img src="/templates/images/avatar/large/alex.jpg" class="ui mini circular image">
         <div class="content">
             <div class="ui sub header">{{nickname}}</div>
         </div>
