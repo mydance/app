@@ -17,7 +17,7 @@ var UnderConstruction = (function () {
 UnderConstruction = __decorate([
     core_1.Component({
         selector: 'underconstruction',
-        template: "\n    <p></p>\n<h2 class=\"ui header\">Under Construction</h2>\n\n<h4 class=\"ui horizontal hidden header\"></h4>\n\n<div class=\"ui center aligned container\">\n    <p style=\"color: #bbb\">Present by WEIRD</p>\n</div>\n<br/>\n    ",
+        template: "\n    <p></p>\n<h2 class=\"ui header\">Under Construction</h2>\n\n<p>We are really sorry for any uncomfortable.</p>\n\n<h4 class=\"ui horizontal hidden header\"></h4>\n\n<div class=\"ui center aligned container\">\n    <p style=\"color: #bbb\">Present by WEIRD</p>\n</div>\n<br/>\n    ",
         providers: [],
     }),
     __metadata("design:paramtypes", [])

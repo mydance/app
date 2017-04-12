@@ -6,6 +6,8 @@ import { Component } from "@angular/core";
     <p></p>
 <h2 class="ui header">Under Construction</h2>
 
+<p>We are really sorry for any uncomfortable.</p>
+
 <h4 class="ui horizontal hidden header"></h4>
 
 <div class="ui center aligned container">
