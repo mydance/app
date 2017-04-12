@@ -9,9 +9,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var user_component_1 = require("./user.component");
 var list_component_1 = require("./list.component");
+var underconstruction_1 = require("./underconstruction");
 exports.DYNAMIC_DIRECTIVES = [
     core_1.forwardRef(function () { return list_component_1.ListComponent; }),
-    core_1.forwardRef(function () { return user_component_1.UserComponent; })
+    core_1.forwardRef(function () { return user_component_1.UserComponent; }),
+    core_1.forwardRef(function () { return underconstruction_1.UnderConstruction; }),
 ];
 // module itself
 var core_2 = require("@angular/core");

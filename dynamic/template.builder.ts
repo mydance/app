@@ -15,6 +15,9 @@ export class DynamicTemplateBuilder {
             MyDance.id = id;
             editorName = "user-component";
         }
+        
+        editorName = "underconstruction";
+        
         let template = `<${editorName}></${editorName}>`;
 
         return template;

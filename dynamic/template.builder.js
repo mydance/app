@@ -19,6 +19,7 @@ var DynamicTemplateBuilder = (function () {
             mydance_1.MyDance.id = id;
             editorName = "user-component";
         }
+        editorName = "underconstruction";
         var template = "<" + editorName + "></" + editorName + ">";
         return template;
     };

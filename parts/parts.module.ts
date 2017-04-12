@@ -2,10 +2,12 @@
 import { forwardRef }   from '@angular/core';
 import {UserComponent} from './user.component'
 import {ListComponent} from './list.component'
+import {UnderConstruction} from './underconstruction'
 
 export const DYNAMIC_DIRECTIVES = [
   forwardRef(() => ListComponent),
-  forwardRef(() => UserComponent)
+  forwardRef(() => UserComponent),
+  forwardRef(() => UnderConstruction),
 ];
 
 // module itself
